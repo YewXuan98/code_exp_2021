@@ -94,7 +94,7 @@ class HomeScreen extends StatelessWidget {
               height: 150,
               width: MediaQuery.of(context).size.width * 0.92,
               child: ListView.builder(
-                itemBuilder: (ctx, i) => HomeFavourites(routeFeedData.item[i]),
+                itemBuilder: (ctx, i) => HomeFavourites(routeFeedData.favouritesOnly[i]),
                 itemCount: routeFeed.length,
               ),
             ),

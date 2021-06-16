@@ -122,4 +122,8 @@ class RouteFeed with ChangeNotifier {
     return _items.firstWhere((item) => item.id == id);
   }
 
+  List<RouteFeedItem> get favouritesOnly {
+    return _items.where((item) => item.isFav).toList();
+  }
+
 }

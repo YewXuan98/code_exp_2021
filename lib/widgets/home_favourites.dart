@@ -9,7 +9,7 @@ class HomeFavourites extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return (item.isFav == true) ? Container(): Container(
+    return Container(
       margin: EdgeInsets.all(5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(4), color: Colors.white),

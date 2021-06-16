@@ -37,7 +37,11 @@ class FeaturedCards extends StatelessWidget {
                     color: Colors.black),
                 width: MediaQuery.of(context).size.width * 0.8,
 
-                child: Image.asset(routeFeedItem.imageUrl),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: Image.asset(routeFeedItem.imageUrl,)),
                 // Container(
                 //   decoration: BoxDecoration(
                 //       borderRadius: BorderRadius.circular(20),
