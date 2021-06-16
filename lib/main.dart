@@ -6,6 +6,7 @@ import 'package:code_exp_2021/providers/parkItem.dart';
 import 'package:code_exp_2021/providers/route_feed.dart';
 import 'package:code_exp_2021/screens/explore_screen.dart';
 import 'package:code_exp_2021/screens/home_screen.dart';
+import 'package:code_exp_2021/screens/profile_screen.dart';
 import 'package:code_exp_2021/screens/route_tabs.dart';
 import 'package:code_exp_2021/screens/shareroute_screen.dart';
 import 'package:flutter/material.dart';
@@ -55,6 +56,7 @@ class MyApp extends StatelessWidget {
           textTheme: ThemeData.light().textTheme.copyWith(
                 bodyText1: TextStyle(color: Color.fromRGBO(20, 51, 51, 1)),
                 bodyText2: TextStyle(color: Color.fromRGBO(20, 51, 51, 1)),
+                
                 headline6: TextStyle(
                   fontSize: 20,
                   fontFamily: 'RobotoCondensed',
@@ -68,8 +70,10 @@ class MyApp extends StatelessWidget {
               ),
         ),
         onGenerateRoute: _appRouter.onGenerateRoute,
-        home: RunningScreen(),
-        routes: {ShareScreen.routeName: (ctx) => ShareScreen()},
+        home: ProfileScreen(),
+        routes: {
+          ShareScreen.routeName: (ctx) => ShareScreen(),
+          ProfileScreen.routeName: (ctx) => ProfileScreen()},
       ),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+
 class ShareScreen extends StatefulWidget {
   static const routeName = "/route-form";
   @override
@@ -23,6 +24,7 @@ class _ShareScreenState extends State<ShareScreen> {
         ],
       ),
       body: Container(
+        color: Theme.of(context).canvasColor,
         padding: EdgeInsets.all(15),
         child: Form(
             child: ListView(
