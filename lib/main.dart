@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
               ),
         ),
         onGenerateRoute: _appRouter.onGenerateRoute,
-        home: ParksScreen(),
+        home: HomeScreen(),
       ),
     );
   }
