@@ -33,15 +33,20 @@ class FeaturedCards extends StatelessWidget {
               //Image
               Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Colors.black),
-                width: MediaQuery.of(context).size.width * 0.8,
-
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  child: Image.asset(routeFeedItem.imageUrl,)),
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                width: 130,
+                height: 170,
+                child: Material(
+                  elevation: 3,
+                  child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      child: Image.asset(
+                        routeFeedItem.imageUrl,
+                      )),
+                ),
                 // Container(
                 //   decoration: BoxDecoration(
                 //       borderRadius: BorderRadius.circular(20),
@@ -52,6 +57,53 @@ class FeaturedCards extends StatelessWidget {
                 //   height: MediaQuery.of(context).size.width * 0.5,
                 // ),
               ),
+              Container(
+                height: 6,
+              ),
+              Container(
+                child: Text(
+                  routeFeedItem.authorName,
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+              ),
+              Row(
+                children: [
+                  Container(
+                    width: 12,
+                  ),
+                  Container(
+                    height: 30,
+                    width: 30,
+                    child: Image.asset('assets/images/heart_featured.png'),
+                  ),
+                  Container(
+                      padding: EdgeInsets.all(6),
+                      child: Text(
+                        routeFeedItem.numberOfFavs.toString(),
+                        style: Theme.of(context).textTheme.bodyText1,
+                      )),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    child: FittedBox(
+                                          child: Text(
+                        routeFeedItem.difficulty,
+                        style: Theme.of(context).textTheme.bodyText2,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              Container(
+                height: 1,
+              ),
+              Container(
+                alignment: Alignment.centerRight,
+                child: FlatButton(
+                  textColor: Colors.red,
+                  onPressed: () {},
+                  child: Text('Read more...'),
+                ),
+              )
             ])),
       ),
     );
