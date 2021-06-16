@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:code_exp_2021/main.dart';
+import 'package:code_exp_2021/screens/shareroute_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 
@@ -128,7 +129,9 @@ class _RouteQuickstartScreenState extends State<RouteQuickstartScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(ShareScreen.routeName);
+                  },
                   icon: Icon(Icons.share_outlined),
                   label: Text("Share")),
               Container(

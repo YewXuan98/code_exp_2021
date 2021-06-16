@@ -7,6 +7,7 @@ import 'package:code_exp_2021/providers/route_feed.dart';
 import 'package:code_exp_2021/screens/explore_screen.dart';
 import 'package:code_exp_2021/screens/home_screen.dart';
 import 'package:code_exp_2021/screens/route_tabs.dart';
+import 'package:code_exp_2021/screens/shareroute_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
@@ -60,15 +61,15 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
                 headline1: TextStyle(
-                  fontSize: 20,
-                  fontFamily: 'RobotoCondensed',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white
-                ),
+                    fontSize: 20,
+                    fontFamily: 'RobotoCondensed',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
         ),
         onGenerateRoute: _appRouter.onGenerateRoute,
         home: RunningScreen(),
+        routes: {ShareScreen.routeName: (ctx) => ShareScreen()},
       ),
     );
   }
