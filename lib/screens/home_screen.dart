@@ -1,5 +1,4 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:carousel_slider/carousel_options.dart';
 import 'package:code_exp_2021/main.dart';
 import 'package:code_exp_2021/providers/carousell.dart';
 import 'package:code_exp_2021/widgets/carousel_card.dart';
@@ -50,7 +49,7 @@ class HomeScreen extends StatelessWidget {
               )
             ],
           ),
-          CarouselSlider.builder(itemCount: carousell.length, itemBuilder: (ctx,i,) => CarouselCard()),
+          CarouselSlider.builder(itemCount: carousell.length, itemBuilder: (ctx,i,) => CarouselCard(carousell[i])),
         ],
       ),
     );
