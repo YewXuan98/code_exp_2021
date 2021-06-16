@@ -3,6 +3,7 @@ import 'package:code_exp_2021/providers/carousell.dart';
 
 import 'package:code_exp_2021/providers/park.dart';
 import 'package:code_exp_2021/providers/parkItem.dart';
+import 'package:code_exp_2021/providers/route_feed.dart';
 import 'package:code_exp_2021/screens/explore_screen.dart';
 import 'package:code_exp_2021/screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider.value(value: Parks()),
         ChangeNotifierProvider.value(value: Carousells()),
+        ChangeNotifierProvider.value(value: RouteFeed()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
