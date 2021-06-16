@@ -6,6 +6,7 @@ import 'package:code_exp_2021/providers/parkItem.dart';
 import 'package:code_exp_2021/providers/route_feed.dart';
 import 'package:code_exp_2021/screens/explore_screen.dart';
 import 'package:code_exp_2021/screens/home_screen.dart';
+import 'package:code_exp_2021/screens/route_tabs.dart';
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
@@ -67,7 +68,7 @@ class MyApp extends StatelessWidget {
               ),
         ),
         onGenerateRoute: _appRouter.onGenerateRoute,
-        home: HomeScreen(),
+        home: RunningScreen(),
       ),
     );
   }
