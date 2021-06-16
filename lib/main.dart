@@ -1,4 +1,5 @@
 import 'package:code_exp_2021/presentation/router/app_router.dart';
+import 'package:code_exp_2021/providers/carousell.dart';
 
 import 'package:code_exp_2021/providers/park.dart';
 import 'package:code_exp_2021/providers/parkItem.dart';
@@ -29,7 +30,7 @@ const MaterialColor kPrimaryColor = const MaterialColor(
 );
 
 class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+  MyApp({Key key}) : super(key: key);
   final AppRouter _appRouter = AppRouter();
 
   // This widget is the root of your application.
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider.value(value: Parks()),
+        ChangeNotifierProvider.value(value: Carousells()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

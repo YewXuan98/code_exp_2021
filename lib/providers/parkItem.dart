@@ -9,10 +9,11 @@ class ParkItem with ChangeNotifier{
   final String imageUrl;
 
   ParkItem(
-      {required this.id,
-      required this.title,
-      required this.distance,
-      required this.amenities,
-      required this.covidNumbers,
-      required this.imageUrl});
+      {
+      @required this.id,
+      @required this.title,
+      @required this.distance,
+      @required this.amenities,
+      @required this.covidNumbers,
+      @required this.imageUrl});
 }

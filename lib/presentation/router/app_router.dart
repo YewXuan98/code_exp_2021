@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class AppRouter {
 
-  Route? onGenerateRoute(RouteSettings routeSettings) {
+  Route onGenerateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) =>

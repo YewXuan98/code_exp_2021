@@ -1,9 +1,16 @@
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:carousel_slider/carousel_options.dart';
 import 'package:code_exp_2021/main.dart';
+import 'package:code_exp_2021/providers/carousell.dart';
+import 'package:code_exp_2021/widgets/carousel_card.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final carousellData = Provider.of<Carousells>(context, listen: false);
+    final carousell = carousellData.item;
     return Container(
       color: kPrimaryColor,
       child: Column(
@@ -42,7 +49,8 @@ class HomeScreen extends StatelessWidget {
                 ),
               )
             ],
-          )
+          ),
+          CarouselSlider.builder(itemCount: carousell.length, itemBuilder: (ctx,i,) => CarouselCard()),
         ],
       ),
     );
